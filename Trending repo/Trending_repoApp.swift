@@ -11,7 +11,7 @@ import SwiftUI
 struct Trending_repoApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RepositorieView()
         }
     }
 }
