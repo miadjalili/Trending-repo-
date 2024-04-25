@@ -14,13 +14,12 @@ struct RepositorieView: View {
     var body: some View {
         NavigationStack {
           
-                
-                    
                     List(viewModel.Repositories, id: \.self) { Repositorie in
                        
                        
-                        RepositorieTrendCell(imageName: Repositorie.owner?.avatarURL ?? "", title: Repositorie.fullName)
-                            
+                        RepositorieTrendCell(imageName: Repositorie.owner?.avatarURL ?? "", title: Repositorie.name ,libraryName: Repositorie.fullName, desc:Repositorie.description ?? "")
+                          
+                            .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 25, trailing: 0))
                     }
                    
                     .toolbar(content: {
@@ -32,10 +31,8 @@ struct RepositorieView: View {
             .navigationTitle("Trending")
             .navigationBarTitleDisplayMode(.inline)
             .scrollContentBackground(.hidden)
-            
-          
         }
-        
+      
         .task {
            await viewModel.getRepositories()
         }

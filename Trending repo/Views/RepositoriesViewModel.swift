@@ -17,7 +17,7 @@ final class RepositoriesViewModel: ObservableObject {
     func getRepositories() async {
         let data = await APIClient.dispatch(
             APIRouter.GetRepositorie(queryParams:
-                                    APIParameters.ProductParams(q: "language")))
+                                        APIParameters.ProductParams(q: "language")))
         
         //Simply we can check http status code here to do any action needed
         guard ((200..<300) ~= data._httpStatusCode) else {

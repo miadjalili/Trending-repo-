@@ -18,11 +18,20 @@ struct ImageLoaderView: View {
         Rectangle()
             .opacity(0.001)
             .overlay {
+                if !urlString.isEmpty
+                {
                 WebImage(url: URL(string: urlString ))
                     .resizable()
                     .indicator(.activity )
                     .aspectRatio(contentMode: .fill)
                     .allowsHitTesting(false)
+            }else
+                {
+                Image(systemName: "rays")
+                    .aspectRatio(contentMode: .fill)
+                    .allowsHitTesting(false)
+                    .foregroundColor(/*@START_MENU_TOKEN@*/.blue/*@END_MENU_TOKEN@*/)
+            }
             }
             .clipped()
         
