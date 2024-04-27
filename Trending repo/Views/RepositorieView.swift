@@ -10,6 +10,8 @@ import SwiftUI
 struct RepositorieView: View {
     
     @ObservedObject var viewModel: RepositoriesViewModel = RepositoriesViewModel()
+    @StateObject var vm = CoreDataViewModel()
+    
     
     var body: some View {
         NavigationStack {

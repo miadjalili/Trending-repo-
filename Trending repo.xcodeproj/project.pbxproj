@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		943296442BDC35A600477E98 /* RepoContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 943296422BDC35A600477E98 /* RepoContainer.xcdatamodeld */; };
+		943296462BDC36D000477E98 /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943296452BDC36D000477E98 /* CoreDataViewModel.swift */; };
 		94CD5A502BD2E82300B191D9 /* Trending_repoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CD5A4F2BD2E82300B191D9 /* Trending_repoApp.swift */; };
 		94CD5A522BD2E82300B191D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CD5A512BD2E82300B191D9 /* ContentView.swift */; };
 		94CD5A542BD2E82400B191D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94CD5A532BD2E82400B191D9 /* Assets.xcassets */; };
@@ -46,6 +48,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		943296432BDC35A600477E98 /* RepoContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RepoContainer.xcdatamodel; sourceTree = "<group>"; };
+		943296452BDC36D000477E98 /* CoreDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
 		94CD5A4C2BD2E82300B191D9 /* Trending repo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trending repo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CD5A4F2BD2E82300B191D9 /* Trending_repoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trending_repoApp.swift; sourceTree = "<group>"; };
 		94CD5A512BD2E82300B191D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -96,6 +100,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		943296412BDC355B00477E98 /* CoreDate */ = {
+			isa = PBXGroup;
+			children = (
+				943296422BDC35A600477E98 /* RepoContainer.xcdatamodeld */,
+				943296452BDC36D000477E98 /* CoreDataViewModel.swift */,
+			);
+			path = CoreDate;
+			sourceTree = "<group>";
+		};
 		94CD5A432BD2E82300B191D9 = {
 			isa = PBXGroup;
 			children = (
@@ -125,6 +138,7 @@
 				94CD5A7C2BD7034C00B191D9 /* Model */,
 				94CD5A7B2BD7033A00B191D9 /* Views */,
 				94CD5A7A2BD702D600B191D9 /* Networking */,
+				943296412BDC355B00477E98 /* CoreDate */,
 				94CD5A512BD2E82300B191D9 /* ContentView.swift */,
 				94CD5A4F2BD2E82300B191D9 /* Trending_repoApp.swift */,
 				94CD5A532BD2E82400B191D9 /* Assets.xcassets */,
@@ -365,6 +379,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				94CD5A802BD7039900B191D9 /* APIConstants.swift in Sources */,
+				943296442BDC35A600477E98 /* RepoContainer.xcdatamodeld in Sources */,
 				94CD5A882BD704AE00B191D9 /* URLExtension.swift in Sources */,
 				94CD5A822BD703CD00B191D9 /* APIRouter.swift in Sources */,
 				94CD5A8A2BD70BA400B191D9 /* RepositoriesModel.swift in Sources */,
@@ -373,6 +388,7 @@
 				94CD5A522BD2E82300B191D9 /* ContentView.swift in Sources */,
 				94CD5A8F2BD718C100B191D9 /* APIParameters.swift in Sources */,
 				94CD5A502BD2E82300B191D9 /* Trending_repoApp.swift in Sources */,
+				943296462BDC36D000477E98 /* CoreDataViewModel.swift in Sources */,
 				94CD5A962BD7267400B191D9 /* ImageLoaderView.swift in Sources */,
 				94CD5A9D2BD7296300B191D9 /* RepositorieTrendCell.swift in Sources */,
 				94CD5A912BD7193D00B191D9 /* RepositoriesViewModel.swift in Sources */,
@@ -752,6 +768,19 @@
 			productName = SDWebImageSwiftUI;
 		};
 /* End XCSwiftPackageProductDependency section */
+
+/* Begin XCVersionGroup section */
+		943296422BDC35A600477E98 /* RepoContainer.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				943296432BDC35A600477E98 /* RepoContainer.xcdatamodel */,
+			);
+			currentVersion = 943296432BDC35A600477E98 /* RepoContainer.xcdatamodel */;
+			path = RepoContainer.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 94CD5A442BD2E82300B191D9 /* Project object */;
 }
