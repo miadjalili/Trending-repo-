@@ -9,10 +9,13 @@ import Foundation
 import CoreData
 import SwiftUI
 
-class CoreDataViewModel: ObservableObject {
+class CoreDataManager: ObservableObject {
+    
+     static let shared = CoreDataManager()
+    
     let container : NSPersistentContainer
-    @Published var savedEntities: [RepoEntity] = []
-    @ObservedObject var viewModel: RepositoriesViewModel = RepositoriesViewModel()
+  
+   
     
     
     init() {
@@ -24,22 +27,23 @@ class CoreDataViewModel: ObservableObject {
                 print("Successfully loaded Core data!.")
             }
         }
-        fetchRepo()
-    }
-    
-    func fetchRepo() {
-        let request = NSFetchRequest<RepoEntity>(entityName: "RepoEntity")
-        do{
-            savedEntities = try container.viewContext.fetch(request)
-        }catch let error{
-            print("ERROR FETCHING. \(error)")
-        }
        
     }
     
-    func addRepo(Vm : RepositorieModel) {
+    func fetchRepo() -> Data? {
+        let request = NSFetchRequest<RepoEntity>(entityName: "RepoEntity")
+        do{
+           let savedEntities = try container.viewContext.fetch(request)
+           return savedEntities.last?.mainjson
+        }catch let error{
+            print("ERROR FETCHING. \(error)")
+        }
+       return nil
+    }
+    
+    func addRepo(Vm : Data) {
         let newRepo = RepoEntity(context: container.viewContext)
-        newRepo.name = Vm.name
+        newRepo.mainjson = Vm
         saveData()
     }
     
@@ -47,7 +51,6 @@ class CoreDataViewModel: ObservableObject {
     func saveData(){
         do {
             try container.viewContext.save()
-            fetchRepo()
         } catch let error {
             print("Error saving. \(error)")
         }
@@ -56,3 +59,4 @@ class CoreDataViewModel: ObservableObject {
     
     
 }
+

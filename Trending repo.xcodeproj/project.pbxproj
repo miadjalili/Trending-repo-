@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		943296442BDC35A600477E98 /* RepoContainer.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 943296422BDC35A600477E98 /* RepoContainer.xcdatamodeld */; };
-		943296462BDC36D000477E98 /* CoreDataViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943296452BDC36D000477E98 /* CoreDataViewModel.swift */; };
+		943296462BDC36D000477E98 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943296452BDC36D000477E98 /* CoreDataManager.swift */; };
 		94CD5A502BD2E82300B191D9 /* Trending_repoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CD5A4F2BD2E82300B191D9 /* Trending_repoApp.swift */; };
 		94CD5A522BD2E82300B191D9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94CD5A512BD2E82300B191D9 /* ContentView.swift */; };
 		94CD5A542BD2E82400B191D9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94CD5A532BD2E82400B191D9 /* Assets.xcassets */; };
@@ -49,7 +49,7 @@
 
 /* Begin PBXFileReference section */
 		943296432BDC35A600477E98 /* RepoContainer.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = RepoContainer.xcdatamodel; sourceTree = "<group>"; };
-		943296452BDC36D000477E98 /* CoreDataViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataViewModel.swift; sourceTree = "<group>"; };
+		943296452BDC36D000477E98 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
 		94CD5A4C2BD2E82300B191D9 /* Trending repo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Trending repo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		94CD5A4F2BD2E82300B191D9 /* Trending_repoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trending_repoApp.swift; sourceTree = "<group>"; };
 		94CD5A512BD2E82300B191D9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -104,7 +104,7 @@
 			isa = PBXGroup;
 			children = (
 				943296422BDC35A600477E98 /* RepoContainer.xcdatamodeld */,
-				943296452BDC36D000477E98 /* CoreDataViewModel.swift */,
+				943296452BDC36D000477E98 /* CoreDataManager.swift */,
 			);
 			path = CoreDate;
 			sourceTree = "<group>";
@@ -388,7 +388,7 @@
 				94CD5A522BD2E82300B191D9 /* ContentView.swift in Sources */,
 				94CD5A8F2BD718C100B191D9 /* APIParameters.swift in Sources */,
 				94CD5A502BD2E82300B191D9 /* Trending_repoApp.swift in Sources */,
-				943296462BDC36D000477E98 /* CoreDataViewModel.swift in Sources */,
+				943296462BDC36D000477E98 /* CoreDataManager.swift in Sources */,
 				94CD5A962BD7267400B191D9 /* ImageLoaderView.swift in Sources */,
 				94CD5A9D2BD7296300B191D9 /* RepositorieTrendCell.swift in Sources */,
 				94CD5A912BD7193D00B191D9 /* RepositoriesViewModel.swift in Sources */,
