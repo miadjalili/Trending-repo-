@@ -9,20 +9,30 @@ import Foundation
 
 
 final class RepositoriesViewModel: ObservableObject {
-    
+    @Published var isLoading = false
     @Published var Repositories: [RepositorieModel] = []
-    
+    @Published var hasError = false
     //GET Method
     @MainActor
     func getRepositories() async {
+        defer{isLoading = false}
+       
+        self.isLoading = true
+        self.Repositories = []
+        self.hasError = false
+
         let data = await APIClient.dispatch(
-            APIRouter.GetRepositorie(queryParams:
-                                        APIParameters.ProductParams(q: "language")))
+            
+                APIRouter.GetRepositorie(queryParams: APIParameters.ProductParams(q: "language", sort: "stars"))
+                        )
+      
         
         //Simply we can check http status code here to do any action needed
         guard ((200..<300) ~= data._httpStatusCode) else {
             Log.error("Server response error")
-            loadRepositoriesFromCoreData()
+             loadRepositoriesFromCoreData()
+            self.hasError = true
+
             return
         }
         
@@ -39,19 +49,21 @@ final class RepositoriesViewModel: ObservableObject {
             
         case .failure(let error):
             Log.error(error.localizedDescription)
-            
-            
+            self.hasError = true
+           
         }
         
         // Load data from CoreData
         func loadRepositoriesFromCoreData() {
+           
             if let lastData = CoreDataManager.shared.fetchRepo() ,
                let lastRepo = try? JSONDecoder().decode([RepositorieModel].self, from: lastData) {
                 self.Repositories = lastRepo
-                print(lastRepo)
+             
             }else
             {
                 print("Error")
+               
             }
               
         }

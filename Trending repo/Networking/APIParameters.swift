@@ -12,6 +12,6 @@ struct APIParameters{
     
     struct ProductParams: Encodable  {
         var q: String?
-       
+        var sort: String?
     }
 }

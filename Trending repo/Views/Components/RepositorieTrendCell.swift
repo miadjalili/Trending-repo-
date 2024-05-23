@@ -19,6 +19,7 @@ struct RepositorieTrendCell: View {
         HStack(spacing: 16){
             ImageLoaderView(urlString: imageName)
                 .frame(width: 55, height: 55)
+                .cornerRadius(6)
             VStack(alignment:.leading,spacing: 12 ,content: {
                 Text(title)
                     .font(.callout)
@@ -41,10 +42,10 @@ struct RepositorieTrendCell: View {
             })
            
         }
-        .padding(.trailing, 2)
+        
+      //  .padding(.trailing, 2)
         .frame(maxWidth: .infinity,alignment: .leading)
         .transition(.move(edge: .bottom))
-        .cornerRadius(6)
         .onTapGesture {
             withAnimation(.easeIn(duration: 0.5)) {
                 isExpanded.toggle()

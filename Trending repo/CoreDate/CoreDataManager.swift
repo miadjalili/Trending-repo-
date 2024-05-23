@@ -57,6 +57,17 @@ class CoreDataManager: ObservableObject {
         
     }
     
+    func fetchLastUpdateTime() -> Date? {
+            let request = NSFetchRequest<RepoEntity>(entityName: "RepoEntity")
+            do {
+                let savedEntities = try container.viewContext.fetch(request)
+                return savedEntities.last?.lastUpdated
+            } catch let error {
+                print("ERROR FETCHING LAST UPDATE TIME. \(error)")
+            }
+            return nil
+        }
+    
     
 }
 
