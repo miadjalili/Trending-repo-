@@ -57,4 +57,8 @@ This project is a single-screen iOS application designed to display the latest t
 
 The app fetches data from the following endpoint:
 
-(https://api.github.com/search/repositories?q=language=+sort:stars)
+https://api.github.com/search/repositories?q=language=+sort:stars
+
+## Assets
+
+- Retry Lottie File: [Download here](https://lottiefiles.com/animations/retry-and-user-busy-version-2-inGByQdvaC).
