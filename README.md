@@ -46,3 +46,15 @@ This project is a single-screen iOS application designed to display the latest t
 -	Data Refresh: Users can refresh the data to get the latest trending repositories.
 -	Error Handling: In case of an API fetch error, an error view will be displayed with a retry option using Lottie animations.
 -	Dark Mode: The app supports dark mode for a seamless user experience.
+
+
+## Assumptions
+
+- The app assumes API calls have a cost and thus caches data to minimize the number of API requests.
+- Slightly stale data is acceptable; users can manually refresh to get the latest data.
+
+## API Gateway
+
+The app fetches data from the following endpoint:
+
+(https://api.github.com/search/repositories?q=language=+sort:stars)
