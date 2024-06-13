@@ -97,7 +97,9 @@ struct RepositoryListView: View {
                         imageName: repository.owner?.avatarURL ?? "",
                         title: repository.name,
                         libraryName: repository.fullName,
-                        desc: repository.description ?? ""
+                        desc: repository.description ?? "",
+                        language: repository.language ?? "",
+                        stars: "\(repository.stars)"
                     )
                     .listRowInsets(EdgeInsets(top: 0, leading: 0, bottom: 12, trailing: 0))
                 }

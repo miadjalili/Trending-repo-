@@ -1,1 +1,3 @@
-# Trending-repo-
+# Trending GitHub Repositories iOS App
+Trending GitHub Repositories
+

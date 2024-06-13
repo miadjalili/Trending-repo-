@@ -21,6 +21,8 @@ struct RepositorieModel: Codable, Hashable{
     let nodeID, name, fullName: String
     let owner: Owner?
     let description: String?
+    let language: String?
+    let stars: Int
 
     enum CodingKeys: String, CodingKey {
         case id
@@ -29,6 +31,8 @@ struct RepositorieModel: Codable, Hashable{
         case fullName = "full_name"
         case owner
         case description
+        case language
+        case stars = "stargazers_count"
       
     }
 }
